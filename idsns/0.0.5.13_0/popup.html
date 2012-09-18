@@ -1,0 +1,98 @@
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <link rel="stylesheet" type="text/css" href="css/popup.css"/>
+  <script type="text/javascript" src="js/vendor/jquery.js"></script>
+  <script type="text/javascript" src="js/vendor/underscore.js"></script>
+  <script type="text/javascript" src="js/common/util.js"></script>
+  <script type="text/javascript" src="js/vendor/jQuery-URL-Parser.js"> </script>
+  <script type="text/javascript" src="build/Const.js"></script>
+  <script type="text/javascript" src="js/chrome/api.js"></script>
+  <script type="text/javascript" src="build/Request.js"></script>
+  <script type="text/javascript" src="js/chrome/popup.js"></script>
+</head>
+<body>
+  <div class="wrapper">
+    <div id="auth-checking" class="loading">
+      <img src="/images/loader.gif">
+      正在验证帐户...
+    </div>
+    <div class="auth">
+      <p class="errors"><span></span><a href="#" class="close">×</a></p>
+      <div class="auth-head">
+        <img src="/images/menu-logo.png" width="120px">
+      </div>
+      <div class="auth-body">
+        <form id="authForm" action="login" class="auth-form" method="post" autocomplete="on">
+          <div class="auth-form-email">
+            <label>邮箱：</label>
+            <input type="text" name="email" class="auth-form-input" tabindex="1">
+          </div>
+          <div class="auth-form-password">
+            <label>密码：</label>
+            <input type="password" name="password" class="auth-form-input" tabindex="2">
+          </div>
+          <div class="auth-form-helper clearfix">
+            <a href="#">忘记密码？</a>
+            <a id="signup" href="#" class="auth-form-signup">注册新帐户</a>
+          </div>
+          <input type="submit" name="commit" class="btn" value="登录">
+        </form>
+      </div>
+    </div>
+
+    <div class="pop">
+    
+      <div class="pop-cnt">
+        <!-- <img src="/images/menu-logo.png" width="120px"> -->
+       
+        <div class="user">
+          <a class="avatar" href="#">
+            <img style="width:48px; height:48px;"></img>
+          </a>
+          <div class="user-details">
+            <a class="uname" href="#"></a>
+            <br/>
+            <span class="fans"></span>
+          </div>
+        </div>
+       
+        <ul class="pop-cnt-ul" style="list-style: none;">
+          <li>
+            <label>
+              <input type="radio" name='switchStat' id="online"> 
+              <span>上线</span>
+            </label>
+            <label>
+              <input type="radio" name='switchStat' id="offline" checked>
+              <span>离线</span>
+            </label>
+          </li>
+          <li>
+            <label>
+              <input type='radio' name='switchStat' id='hidden2All'>
+              <span>隐身</span>
+            </label>
+            <label>
+              <input type='radio' name='switchStat' id='hidden2Fans'>
+              <span>只对粉丝隐身</span>
+            </label>
+          </li>
+          <li class="hoverable" id="add2Blacklist">
+            <a href="#">将当前网站拉黑</a>
+          </li>
+          <li class="hoverable" id="openSetting">
+            <a href="#">主页</a>
+          </li>
+          <li class="hoverable" id="openChat">
+            <a href="#">打开聊天窗口</a>
+          </li>
+          <li class="hoverable" id="logout">
+            <a href="#">退出</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

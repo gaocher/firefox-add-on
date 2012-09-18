@@ -1,0 +1,34 @@
+{
+   "background": {
+      "page": "background.html"
+   },
+   "browser_action": {
+      "default_icon": "/images/icon.png",
+      "default_popup": "popup.html"
+   },
+   "content_scripts": [ {
+      "css": [ "/css/style.css" ],
+      "exclude_globs": [ "*://www.newsmth.net/*", "*://bbs.nju.edu.cn/*" ],
+      "js": [ "js/vendor/underscore.js", "js/vendor/jquery.js", "js/vendor/jquery-mousewheel-3.0.6.js", "js/common/util.js", "build/Const.js", "js/vendor/backbone-optamd3.js", "js/vendor/require.js", "build/main-built.js" ],
+      "matches": [ "http://*/*", "https://*/*" ],
+      "run_at": "document_end"
+   }, {
+      "all_frames": true,
+      "css": [ "/css/style.css" ],
+      "js": [ "js/vendor/underscore.js", "js/vendor/jquery.js", "js/vendor/jquery-mousewheel-3.0.6.js", "js/common/util.js", "build/Const.js", "js/vendor/backbone-optamd3.js", "js/vendor/require.js", "build/main-built.js" ],
+      "matches": [ "*://www.newsmth.net/*", "*://bbs.nju.edu.cn/*" ],
+      "run_at": "document_end"
+   } ],
+   "description": "\u8BA9\u76F8\u9047\u65E0\u5904\u4E0D\u5728",
+   "icons": {
+      "128": "/images/thumb_large_default.png",
+      "16": "/images/icon.png",
+      "48": "/images/thumb_small_default.png"
+   },
+   "key": "MIGfMA0GCSqGSIb3DQEBAQUAA4GNADCBiQKBgQDyzaPcjjIXqrkMTRQPkdyEMklzt4Z2Dc6a3KYPHJJ07MLjk1z4UV0HZeJl4SpMhRDqyqdKfjeZCrbXjhDsyCZ3OCnkC1mmbEWNr30IjlaNhPwWRoIEEPNUHMoIwaG5YwJWD4y/8mDYwIjgFHtr1ccJ/OfiNeDWrMUHZQFcagAVxQIDAQAB",
+   "manifest_version": 2,
+   "name": "\u4E0E\u4F60\u540C\u5728",
+   "permissions": [ "unlimitedStorage", "cookies", "tabs", "http://*/*", "https://*/*" ],
+   "update_url": "http://clients2.google.com/service/update2/crx",
+   "version": "0.0.5.13"
+}

@@ -1,0 +1,56 @@
+<div class="chat_content clearfix">
+  <div class="chatgroup-cg">
+    <ul class="cg-avatar-ul">
+      {{#each users}}
+        <li class="cg-avatar-li">
+          <a class="cg-avatar-wrap" data-toggle="dropdown">
+            <img src="{{ this.full_avatar }}" title="{{ this.uname }}">
+          </a>
+          <ul class="dropdown-menu">
+            <li><a href="#" class="cg-block-user" uid={{ this.id }}>拉黑{{ this.sname }}</a></li>
+            <li><a href="#" class="cg-remove-user" uid={{ this.id }}>移除{{ this.sname }}</a></li>
+          </ul>
+      {{/each}}
+    </ul>
+  </div>
+  <ul class="ctrl-icons">
+    <li class="ctrl-icon">
+      <i class="icon-chevron-left click-disabled" title="向左"></i>
+    </li>
+    <li class="ctrl-icon">
+      <i class="icon-chevron-right" title="向右"></i>
+    </li>
+    <li class="ctrl-icon">
+      <i class="icon-plus" title="添加新联系人" data-toggle="dropdown"></i>
+      <ul class="dropdown-menu cg-add-user-wrap">
+        <li class="clearfix">
+          <input class="cg-add-user-input" type="text"/>
+          <img class="loading" src="/images/ajax-loader.gif"/>
+          <span class="loading-result"></span>
+          <a class="Button Button11 WhiteButton ContrastButton cg-add-user">添加联系人</a>
+        </li>
+      </ul>
+    </li>
+    <li class="ctrl-icon">
+      <i class="icon-hand-up" title="加载历史记录"></i>
+    </li>
+    <li class="ctrl-icon">
+      <i class="icon-remove" title="关闭会话"></i>
+    </li>
+    <li class="ctrl-icon">
+      <i class="icon-off" title="退出会话"></i>
+    </li>
+  </ul>
+  <div class="outputWrap"></div>
+  <div class="inputWrap">
+    <div class="groupUsersWrap">
+    </div>
+    <div class="groupMsgInputWrap">
+      <textarea class="msgInput" style="resize:none;"></textarea>
+    </div>
+    <div class="groupCtrlPanel">
+      按 ctrl+enter 发送
+      <a class="Button Button11 WhiteButton ContrastButton sendMsgBtn">发送</a>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,9 @@
+<div id="new_group_content">
+  <label>输入参与者名称</label>
+  <select class="chzn-select-group" id="group_users" data-placeholder="名称" multiple="multiple" name="group_users[]" size="10">
+    {{#each names}}
+      <option value="{{this}}">{{this}}</option>
+    {{/each}}
+  </select>
+  <a class="Button Button11 WhiteButton ContrastButton">新建</a>
+</div>
